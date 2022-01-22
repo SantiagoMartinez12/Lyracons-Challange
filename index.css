@@ -1,0 +1,197 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+   body {
+    font-family: arial,sans-serif;
+   }
+   a {
+    text-decoration: none;
+   }
+   li {
+    list-style: none;
+   }
+   img {
+       width: 10%;
+       height: 15%;
+   }
+   /* NAVBAR */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 20px;
+    background-color:  #d7d6d7  ;
+    color: black;
+   }
+   .lyracons-logo {
+    width: 165px;
+    margin-left: 2rem;
+    cursor: pointer;
+}
+   .nav-links a {
+    color: black;
+   }
+   /* LOGO */
+   .logo {
+    font-size: 32px;
+    padding-right: 20%;
+    
+   }
+   /* NAVBAR MENU */
+   .menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+   }
+   .menu li:hover {
+    background-color:  #d7d6d7 ;
+    border-radius: 5px;
+    transition: 0.3s ease;
+   }
+   .menu li {
+    padding: 5px 14px;
+   }
+   /* DROPDOWN MENU */
+   .item1 {
+    position: relative; 
+   }
+   .dropdown {
+    background-color:  #d7d6d7  ;
+    padding: 1em 0;
+    position: absolute; 
+    display: none;
+    border-radius: 8px;
+    top: 35px;
+   }
+   .dropdown li + li {
+    margin-top: 10px;
+   }
+   .dropdown li {
+    padding: 0.5em 1em;
+    width: 8em;
+    text-align: center;
+   }
+   .dropdown li:hover {
+    background-color: #d7d6d7  ;
+   }
+   .item1:hover .dropdown {
+    display: block;
+   }
+
+ 
+/* CHECK MOBILE */
+input[type=checkbox]{
+    display: none;
+   } 
+   /*HAMBURGER MENU*/
+   .hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+   }
+  
+
+   .cards {
+    width:60%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+    margin-left: 30%;
+}
+.card {
+    display: grid;
+    grid-template-rows: max-content 40px 1fr;
+    border: solid 1px;
+    padding: 5%;
+    padding-bottom: 20%;
+}
+
+.card img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.buttonBuy {
+    height: 60%;
+    width: 88%;
+    margin-left: 5%;
+    margin-top: 5%;
+    background-color:#c5c5c4;
+    border: none;
+}
+
+.sidebar1 {
+    background: #cb530e;
+    display:flex;
+    width: 15%;
+    height: 75%;
+    position: absolute;
+    top: 12%;
+    left: 15%;
+    transition: background 0.3s linear;
+    align-items: center;
+    justify-content: center;
+}
+.sidebar-text{
+    animation: text-enter 0.3s ease-out;
+}
+
+
+
+
+
+
+ /* MEDIA QUERIES */
+ @media (max-width: 768px) {
+    .menu { 
+     display:none;
+     position: absolute;
+     background-color:#aeaaad;
+     right: 0;
+     left: 0;
+     text-align: center;
+     padding: 16px 0;
+    }
+    .menu li:hover {
+     display: inline-block;
+     background-color:#aeaaad;
+     transition: 0.3s ease;
+    }
+    .menu li + li {
+     margin-top: 12px;
+    }
+    .sidebar1{
+        display:flex;
+        padding-left: 0px;
+        left: 0px;
+        width:30%
+    }
+    input[type=checkbox]:checked ~ .menu{
+     display: block;
+    }
+    .hamburger {
+     display: block;
+    }
+    .dropdown {
+     left: 50%;
+     top: 30px;
+     transform: translateX(35%);
+    }
+    .dropdown li:hover {
+     background-color: #aeaaad;
+    }
+    .cards {
+        width:60%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+        grid-gap: 20px;
+        padding: 20px;
+        margin-left: 30%;
+    }
+    }
+    
+   
