@@ -12,7 +12,6 @@ menu2[0].addEventListener("click", () => {
 })
 
 menu3.addEventListener("mouseenter", () => {
-    console.log("HOLA")
     sidebar.style.background = "orange"
 })
 
